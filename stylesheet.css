@@ -3,8 +3,26 @@
   }
 * {
     margin: 0;
+    
   }
 
+  @font-face {
+    font-family: 'santello_regularregular';
+    src: url('res/santello-webfont.woff2') format('woff2'),
+         url('res/santello-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+  @font-face {
+    font-family: 'norsebold';
+    src: url('res/norse-bold-webfont.woff2') format('woff2'),
+         url('res/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
   img, picture, video, canvas, svg {
     display: block;
@@ -14,6 +32,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: white;
+    z-index: 2;
 }
 
 img{
@@ -24,16 +43,19 @@ img{
 .imageContainer{
     width: 30%;
     height: 100vh;
-    float:left;
-    flex-shrink: 3;
-    flex-grow: 3;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-image: url(res/isaac--UFPNNT51iI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
 }
 
-.backImage{
-    width: auto;
-    min-width: 150px;
-    max-width: 600px;
-}
 
 .container{
     display: flex;
@@ -55,8 +77,11 @@ img{
     width: 70%;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: whitesmoke;
     color:black;
+    z-index: 2;
+    font-family: santello_regularregular;
+    min-height: 100vh;
 }
 
 .formContainer{
@@ -67,19 +92,25 @@ img{
     display: flex;
     flex-direction: column;
     gap:2rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .formAlignment{
-    display: grid;
+    display: flex;
     gap: 1vw;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    width: 350px;
+    max-width: 500px;
+    min-width: 350px;
+    flex-wrap: wrap;
 }
 
 .header{
     padding: 2rem;
     margin-top: 5rem;
     margin-bottom: 3rem;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .footer{
@@ -87,6 +118,7 @@ img{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    overflow: hidden;
 }
 
 input{
@@ -102,28 +134,13 @@ input[type=password]:invalid{
     outline:none;
 }
 
-input[type=text]:focus{
-    filter:drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
-    border-color:blue;
-    outline:none;
-}
-
-input[type=tel]:focus{
-    filter:drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    filter: drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
     border-color: blue;
-    outline:none;
-}
-
-input[type=email]:focus{
-    filter:drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
-    border-color: blue;
-    outline:none;
-}
-
-input[type=password]:focus{
-    filter:drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
-    border-color: blue;
-    outline:none;
+    outline: none;
 }
 
 a{
@@ -140,8 +157,10 @@ a{
     height: 50px;
     background-color: peru;
     color: white;
-    font-weight: 700;
-    filter:drop-shadow(0px 0px 0.2rem rgb(145, 144, 144))
+    font-weight: 500;
+    filter:drop-shadow(0px 0px 0.2rem rgb(145, 144, 144));
+    font-family: santello_regularregular;
+    font-size: 20px;
 }
 
 .register:active{
@@ -151,4 +170,37 @@ a{
 input[type=password]:valid{
     border-color: greenyellow;
     outline:none;
+}
+
+.odinfont{
+    font-family: norsebold;
+}
+
+.overlay {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 30%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, 0.5); /* Schimbă opacitatea și culoarea după preferințe */
+    color: white;
+    display: flex;
+    font-size: 7rem;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shoutout{
+    font-size:12px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    z-index: 1;
 }
