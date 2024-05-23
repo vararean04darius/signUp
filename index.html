@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="confirmPassword.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,11 +14,10 @@
     </div>
     <div class="mainPage">
       <div class="header">
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eius laudantium quia velit nesciunt earum quis, 
-          doloribus voluptatem quasi beatae tenetur vero modi, blanditiis culpa molestiae deleniti dignissimos consequuntur eaque.</h1>
+        <h1>Join us today and make your dream of flying a reality!</h1>
       </div>
       <div class="formContainer">
-        <h1>Let's do this!</h1>
+        <h1>Take to the Skies!</h1>
         <form action="post">
           <div class="formAlignment">
             <div class="column">
@@ -34,7 +32,7 @@
               <div class="group">
                 <label for="password">PASSWORD</label>
                 <input type="password" id="password" name="password"
-                required pattern="[A-Za-z0-9]{10}">
+                required pattern="[A-Za-z0-9]{10}" placeholder="Must be 10 characters">
               </div>
             </div>
             <div class="column">
@@ -49,7 +47,7 @@
               <div class="group">
                 <label for="confirmPassword">CONFIRM PASSWORD</label>
                 <input type="password" id="confirmPassword" name="confirmPassword"
-                required pattern="[A-Za-z0-9]{10}">
+                required pattern="[A-Za-z0-9]{10}" placeholder="Must match">
               </div>
             </div>
           </div>
@@ -62,6 +60,7 @@
       </div>
     </div>
   </div>
+  <script src="confirmPassword.js"></script>
 </body>
 </html>
 

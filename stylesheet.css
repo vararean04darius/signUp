@@ -13,7 +13,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(236, 235, 235);
+    background-color: white;
 }
 
 img{
@@ -53,13 +53,18 @@ img{
     width: 70%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(236, 235, 235);
+    background-color: white;
+    color:black;
 }
 
 .formContainer{
-    background-color: white;
+    background-color: gainsboro;
+    color:black;
     padding: 2rem;
-    filter: drop-shadow(5px 5px 0.175rem rgb(207, 207, 207));
+    filter: drop-shadow(3px 5px 0.175rem rgb(167, 167, 167));
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
 }
 
 .formAlignment{
@@ -70,6 +75,7 @@ img{
 .header{
     padding: 2rem;
     margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 .footer{
@@ -87,9 +93,14 @@ input{
     height: 25px;
 }
 
+input[type=password]:invalid{
+    border-color: red;
+    outline:none;
+}
+
 input[type=text]:focus{
     filter:drop-shadow(0px 0px 0.1rem rgb(128, 128, 128));
-    border-color: blue;
+    border-color:blue;
     outline:none;
 }
 
@@ -129,10 +140,10 @@ a{
     filter:drop-shadow(0px 0px 0.2rem rgb(145, 144, 144))
 }
 
-input[type=password]:invalid{
-    border-color: red;
-    outline:none;
+.register:active{
+    background-color:skyblue;
 }
+
 input[type=password]:valid{
     border-color: greenyellow;
     outline:none;
