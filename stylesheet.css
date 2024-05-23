@@ -25,6 +25,8 @@ img{
     width: 30%;
     height: 100vh;
     float:left;
+    flex-shrink: 3;
+    flex-grow: 3;
 }
 
 .backImage{
@@ -68,8 +70,10 @@ img{
 }
 
 .formAlignment{
-    display: flex;
+    display: grid;
     gap: 1vw;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    width: 350px;
 }
 
 .header{
